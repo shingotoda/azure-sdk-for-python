@@ -188,7 +188,7 @@ class BaseExporter:
                 if not track_response.errors:  # 200
                     self._consecutive_redirects = 0
                     if not self._is_stats_exporter():
-                        logger.info("Transmission succeeded: Item received: %s. Items accepted: %s",
+                        logger.debug("Transmission succeeded: Item received: %s. Items accepted: %s",
                                     track_response.items_received, track_response.items_accepted)
                     if self._should_collect_stats():
                         _update_requests_map(_REQ_SUCCESS_NAME[1])
